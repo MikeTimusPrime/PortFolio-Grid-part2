@@ -1,0 +1,57 @@
+body {
+  background-color: #c3cfe2;
+}
+
+body .child1 {
+  background-color: red;
+}
+
+body .parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-auto-flow: row;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  position: relative;
+}
+
+body .foto {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+body .foto:hover {
+  -webkit-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 0.1;
+}
+
+.child1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  font-size: 3em;
+}
+
+@media (max-width: 1224px) {
+  body .parent {
+    background-color: red;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
