@@ -1,0 +1,76 @@
+body {
+  background-color: #c3cfe2;
+}
+
+body .container {
+  position: relative;
+}
+
+body .parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-auto-flow: row;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  position: relative;
+}
+
+.foto {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.container:hover .btn {
+  opacity: 1;
+}
+
+.container:hover .foto {
+  opacity: 0.2;
+  background-color: black;
+}
+
+.btn {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 1300px) {
+  body .parent {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  body .parent {
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+    grid-auto-flow: row;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
